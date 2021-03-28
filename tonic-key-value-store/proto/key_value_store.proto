@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package app;
+
+service App {
+    rpc Send (SendRequest) returns (SendReply);
+    rpc Subscribe (SubscribeRequest) returns (stream SubscribeReply);
+}
+
+message SendRequest {
+   string value = 1;
+}
+
+message SendReply {}
+
+message SubscribeRequest {}
+
+message SubscribeReply {
+   string value = 1;
+}

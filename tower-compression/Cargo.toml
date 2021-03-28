@@ -1,0 +1,19 @@
+[package]
+name = "tower-compression"
+version = "0.1.0"
+authors = ["David Pedersen <david.pdrsn@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-compression = { version = "0.3", features = ["gzip", "tokio"] }
+bytes = { version = "1" }
+futures = "0.3"
+http = "0.2"
+http-body = "0.4"
+pin-project = "1"
+tokio = { version = "1" }
+tokio-util = { version = "0.6", features = ["io"] }
+tower-layer = "0.3"
+tower-service = "0.3"
